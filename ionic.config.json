@@ -1,5 +1,7 @@
 {
   "name": "musicApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
