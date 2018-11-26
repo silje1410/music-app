@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NativeAudio } from '@ionic-native/native-audio';
 import { Platform } from "ionic-angular";
+import { AudioPath} from "../../providers/audio-path/audioPath";
 
 
 /**
@@ -17,21 +18,45 @@ import { Platform } from "ionic-angular";
   templateUrl: 'nature.html',
 })
 
-
 export class NaturePage {
-  audioFile:HTMLAudioElement = new Audio('assets/audio/nature/btn.mp3');
 
-  constructor(public navCtrl: NavController, private nativeAudio : NativeAudio, public platform : Platform, public navParams: NavParams) {
+  //nature:HTMLAudioElement = new Audio('assets/audio/nature/btn.mp3');
+  //car:HTMLAudioElement = new Audio('assets/audio/snare.mp3');
+
+  audioP;
+
+  constructor(public navCtrl: NavController, private nativeAudio : NativeAudio, private audioPath : AudioPath, public platform : Platform, public navParams: NavParams) {
+    this.audioP = audioPath;
+    this.audioP.setMap('nature');
   }
 
-  play(){
-    this.audioFile.play();
-
-    //new Audio('assets/audio/nature/btn.mp3').play();
-
-
+  findSound(id){
+    return this.audioP.getMap('nature').get(id);
   }
+
+  playSound(id){
+    this.findSound(id).play();
+  }
+
+
+  /*
+  //skriv id.play
+  if (this.playing == '' || this.playing != id){
+    this.nature.pause();
+  }
+  this.playing = id;
+  if (id == 'nature'){
+    this.nature.play();
+  }else{
+    this.car.play();
+  }
+  */
+
+  //new Audio('assets/audio/nature/btn.mp3').play();
+
+
 
 
 
 }
+

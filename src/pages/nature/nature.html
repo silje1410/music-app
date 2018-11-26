@@ -15,10 +15,33 @@
 
 <ion-content padding>
 
-  <ion-card (click)="play()">
+  <ion-card (click)="playSound(1)">
     <img src="../assets/imgs/nature.jpg"/>
     <div class="card-title">Nature</div>
     <div class="card-subtitle">x sounds</div>
   </ion-card>
 
+  <ion-card (click)="playSound(2)">
+    <img src="../assets/imgs/car.jpg"/>
+    <div class="card-title">Car</div>
+    <div class="card-subtitle">x sounds</div>
+  </ion-card>
+
 </ion-content>
+
+<script>
+  var currentPlayer;
+  function EvalSound(soundobj) {
+
+    var thissound=document.getElementById(soundobj);
+    if(currentPlayer  && currentPlayer != thissound) {
+      currentPlayer.pause();
+    }
+    if (thissound.paused)
+      thissound.play();
+    else
+      thissound.pause();
+    thissound.currentTime = 0;
+    currentPlayer = thissound;
+  }
+  </script>
