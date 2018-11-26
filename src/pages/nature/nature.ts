@@ -24,6 +24,7 @@ export class NaturePage {
   //car:HTMLAudioElement = new Audio('assets/audio/snare.mp3');
 
   audioP;
+  currentPlaying = 0;
 
   constructor(public navCtrl: NavController, private nativeAudio : NativeAudio, private audioPath : AudioPath, public platform : Platform, public navParams: NavParams) {
     this.audioP = audioPath;
@@ -35,7 +36,14 @@ export class NaturePage {
   }
 
   playSound(id){
-    this.findSound(id).play();
+    if (this.currentPlaying == 0){
+      this.findSound(id).play();
+      this.currentPlaying = id;
+    }else{
+      this.findSound(this.currentPlaying).pause();
+      this.findSound(id).play();
+      this.currentPlaying = id;
+    }
   }
 
 
