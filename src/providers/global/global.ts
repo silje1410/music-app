@@ -14,6 +14,7 @@ import {AudioPath} from "../audio-path/audioPath";
 @Injectable()
 export class GlobalProvider {
   public GlobalSound:number = 0;
+  public TypeSound:string;
 
   constructor(private audioPath : AudioPath) {
   }
@@ -30,6 +31,7 @@ export class GlobalProvider {
     - Stop the sound before playing the next sound.
   */
   public PlaySound(id, type){
+    this.TypeSound = type;
     if (this.GlobalSound == 0){
       this.findSound(id, type).play();
       this.GlobalSound = id;

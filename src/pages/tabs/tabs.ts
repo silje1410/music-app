@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { Navbar } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 
-
-
 import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
@@ -26,14 +24,14 @@ export class TabsPage {
 
   }
 
-  public findSound(id){
-    return this.audioPath.getMap('nature').get(id);
+  public findSound(id, type){
+    return this.audioPath.getMap(type).get(id);
   }
   myFunction(){
     console.log("tab-change");
     if(this.globalProvider.GlobalSound != 0) {
-      this.findSound(this.globalProvider.GlobalSound).pause();
-      this.findSound(this.globalProvider.GlobalSound).currentTime = 0;
+      this.findSound(this.globalProvider.GlobalSound, this.globalProvider.TypeSound).pause();
+      this.findSound(this.globalProvider.GlobalSound, this.globalProvider.TypeSound).currentTime = 0;
       this.globalProvider.GlobalSound = 0;
     }
   }
