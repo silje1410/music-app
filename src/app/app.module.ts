@@ -10,6 +10,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { NaturePage } from '../pages/nature/nature';
+import { BathroomPage } from "../pages/bathroom/bathroom";
+import { CarPage } from "../pages/car/car"
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -17,6 +19,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeAudio } from '@ionic-native/native-audio';
 import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
 import { AudioPath} from "../providers/audio-path/audioPath";
+import { GlobalProvider } from '../providers/global/global';
 
 
 @NgModule({
@@ -27,6 +30,8 @@ import { AudioPath} from "../providers/audio-path/audioPath";
     HomePage,
     TabsPage,
     NaturePage,
+    BathroomPage,
+    CarPage
   ],
   imports: [
     BrowserModule,
@@ -40,6 +45,8 @@ import { AudioPath} from "../providers/audio-path/audioPath";
     HomePage,
     TabsPage,
     NaturePage,
+    BathroomPage,
+    CarPage
   ],
   providers: [
     StatusBar,
@@ -47,7 +54,8 @@ import { AudioPath} from "../providers/audio-path/audioPath";
     NativeAudio,
     SmartAudioProvider,
     AudioPath,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GlobalProvider
   ]
 })
 export class AppModule {}

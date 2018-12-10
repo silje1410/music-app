@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NaturePage } from '../nature/nature';
+import { BathroomPage } from '../bathroom/bathroom';
+import { CarPage } from "../car/car";
 
 
 @Component({
@@ -14,6 +16,13 @@ export class HomePage {
   }
   redirectToNature(){
     this.navCtrl.push(NaturePage);
+  }
+  redirectToBathroom(){
+    this.navCtrl.push(BathroomPage);
+  }
+
+  redirectToCar(){
+    this.navCtrl.push(CarPage)
   }
 
 

@@ -1,3 +1,17 @@
 page-about {
 
+  p {
+    overflow: inherit;
+    font-size: 1.4rem;
+    line-height: normal;
+    text-overflow: inherit;
+    color: #8e9093;
+    margin: 0 0 2px;
+  }
+  .wrap{
+    border-bottom: 1px solid grey;
+  }
+
+
+
 }

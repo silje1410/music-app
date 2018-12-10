@@ -12,7 +12,7 @@
 
 </ion-header>
 
-
+<!--
 <ion-content padding>
 
   <ion-card (click)="playSound(1)">
@@ -28,7 +28,48 @@
   </ion-card>
 
 </ion-content>
+-->
 
+<ion-content padding>
+
+  <ion-item class="image-wrapper" (click)="playSound(1, 'nature')">
+    <img src="../assets/imgs/rain.jpg" alt="Poster" class="customized-image">
+    <p>Rain</p>
+  </ion-item>
+
+  <ion-item class="image-wrapper" (click)="playSound(2, 'nature')">
+    <img src="../assets/imgs/waves.jpg" alt="Poster" class="customized-image">
+    <p>Wave</p>
+  </ion-item>
+
+
+  <ion-item class="image-wrapper" (click)="playSound(3, 'nature')">
+    <img src="../assets/imgs/dripping.jpg" alt="Poster" class="customized-image">
+    <p>Water dripping</p>
+  </ion-item>
+
+<div>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/imgs/car.jpg">
+      </ion-thumbnail>
+      <h2>Carn horn</h2>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/imgs/nature.jpg">
+      </ion-thumbnail>
+      <h2>Toilet flush</h2>
+    </ion-item>
+
+</div>
+
+</ion-content>
+
+
+<!--
 <script>
   var currentPlayer;
   function EvalSound(soundobj) {
@@ -45,3 +86,4 @@
     currentPlayer = thissound;
   }
   </script>
+-->
