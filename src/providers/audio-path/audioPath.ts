@@ -12,8 +12,9 @@ export class AudioPath{
       this.natureMap.set(2, new Audio('assets/audio/nature/wave.mp3'));
       this.natureMap.set(3, new Audio('assets/audio/nature/waterDrop.mp3'))
     } else if (name == 'car'){
-      this.carMap.set(1, new Audio('assets/audio/car/carAlarm.mp3'));
-      this.carMap.set(2, new Audio('assets/audio/car/carHorn.mp3'));
+      this.carMap.set(1, new Audio('assets/audio/car/horn.mp3'));
+      this.carMap.set(2, new Audio('assets/audio/car/turningSignal.mp3'));
+      this.carMap.set(3, new Audio('assets/audio/car/startingCar.mp3'));
     } else if (name == 'bathroom'){
       this.bathroomMap.set(1, new Audio('assets/audio/bathroom/showerhead.mp3'))
       this.bathroomMap.set(2, new Audio('assets/audio/bathroom/flush.mp3'))

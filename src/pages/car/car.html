@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>car</ion-title>
+    <ion-title>Car</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,18 +15,18 @@
 
 <ion-content padding>
 
-  <ion-item class="image-wrapper">
+  <ion-item class="image-wrapper" (click)="playSound(1, 'car')">
     <img src="../assets/imgs/car-horn.jpg" alt="Poster" class="customized-image">
     <p>Car horn</p>
   </ion-item>
 
 
-  <ion-item class="image-wrapper">
+  <ion-item class="image-wrapper" (click)="playSound(2, 'car')">
     <img src="../assets/imgs/turnsignal.jpg" alt="Poster" class="customized-image">
     <p>Turn signal</p>
   </ion-item>
 
-  <ion-item class="image-wrapper">
+  <ion-item class="image-wrapper" (click)="playSound(3, 'car')">
     <img src="../assets/imgs/start-car.jpg" alt="Poster" class="customized-image">
     <p>Starting the car</p>
   </ion-item>

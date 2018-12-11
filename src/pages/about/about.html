@@ -10,17 +10,17 @@
   <ion-grid>
     <h2>Nature</h2>
     <ion-row>
-      <ion-col class="wrap">
+      <ion-col class="wrap" (click)="playSound(1, 'nature')">
         <img src="../assets/imgs/rain.jpg" alt="Poster" class="customized-image">
         <p>Rain</p>
       </ion-col>
 
-      <ion-col class="wrap">
+      <ion-col class="wrap" (click)="playSound(2, 'nature')">
         <img src="../assets/imgs/waves.jpg" alt="Poster" class="customized-image">
-        <p>Waves</p>
+        <p>Wave</p>
       </ion-col>
 
-      <ion-col class="wrap">
+      <ion-col class="wrap" (click)="playSound(3, 'nature')">
         <img src="../assets/imgs/dripping.jpg" alt="Poster" class="customized-image">
         <p>Water dripping</p>
       </ion-col>
@@ -28,30 +28,30 @@
 
     <h2>Bathroom</h2>
     <ion-row>
-      <ion-col class="wrap">
+      <ion-col class="wrap" (click)="playSound(1, 'bathroom')">
           <img src="../assets/imgs/shower-head.jpg" alt="Poster" class="customized-image">
           <p>Shower head</p>
       </ion-col>
-      <ion-col class="wrap">
+      <ion-col class="wrap" (click)="playSound(2, 'bathroom')">
           <img src="../assets/imgs/toilet2.jpg" alt="Poster" class="customized-image">
           <p>Toilet flush</p>
       </ion-col>
-      <ion-col class="wrap">
+      <ion-col class="wrap" (click)="playSound(3, 'bathroom')">
           <img src="../assets/imgs/bath_sink2.jpg" alt="Poster" class="customized-image">
           <p>Spring water</p>
       </ion-col>
     </ion-row>
     <h2>Car</h2>
     <ion-row>
-      <ion-col class="wrap">
+      <ion-col class="wrap" (click)="playSound(1, 'car')">
         <img src="../assets/imgs/car-horn.jpg" alt="Poster" class="customized-image">
         <p>Car horn</p>
       </ion-col>
-      <ion-col class="wrap">
+      <ion-col class="wrap" (click)="playSound(2, 'car')">
         <img src="../assets/imgs/turnsignal.jpg" alt="Poster" class="customized-image">
         <p>Turn signal</p>
       </ion-col>
-      <ion-col class="wrap">
+      <ion-col class="wrap" (click)="playSound(3, 'car')">
         <img src="../assets/imgs/start-car.jpg" alt="Poster" class="customized-image">
         <p>Starting the car</p>
       </ion-col>
